@@ -1,7 +1,13 @@
 
-@DTU SVT 2025
+@DTU SVT 2026
 
 @Jan Jastrzebski, Xiao Chen
+
+============
+Introduction
+============
+
+This is a README for the Blade Damage Map software, which allows for visualization and subsequent analysis of inspections performed on wind turbine blades in wind turbine farms as well as single blade wind turbines from tests performed in research or testing facilities.
 
 ============
 LICENSE
