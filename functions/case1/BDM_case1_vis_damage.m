@@ -9,8 +9,7 @@ function BDM_case1_vis_damage(wtID, tabDmg, blen, virt)
 
 fprintf('3D plotting is happening, dependent on damage amount \n')
 
-% Loading in the pointclouds used for localization [cut loading from 25
-% seconds to sub 1 second (can you tell im proud?)]
+% Loading in the pointclouds used for localization
 blade = virt.blade; lead = virt.lead; spar = virt.spar; trail = virt.trail;
 
 % Check how many plots will have to be made, min 1 max 3
@@ -145,7 +144,7 @@ for j = 1:height(list)
                 end
                 
                 % Adding to legend
-                add = {append('LE suction side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
+                add = {append('LE pressure side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
                 leg{j} = vertcat(leg{j},add);
 
             end
@@ -175,7 +174,7 @@ for j = 1:height(list)
                     leading_clouds = pointCloud(cut,"Color",col_4leg);
                 end
 
-                add = {append('LE pressure side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
+                add = {append('LE suction side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
                 leg{j} = vertcat(leg{j},add);
             end
 
@@ -226,7 +225,7 @@ for j = 1:height(list)
                     spar_clouds = pointCloud(cut,"Color",col_4leg);
                 end
 
-                add = {append('Suction side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
+                add = {append('Pressure side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
                 leg{j} = vertcat(leg{j},add);
             end
 
@@ -251,7 +250,7 @@ for j = 1:height(list)
                     spar_clouds = pointCloud(cut,"Color",col_4leg);
                 end
 
-                add = {append('Pressure side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
+                add = {append('Suction side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
                 leg{j} = vertcat(leg{j},add);
 
             end
@@ -281,7 +280,7 @@ for j = 1:height(list)
                     trail_clouds = pointCloud(cut,"Color",col_4leg);
                 end
 
-                add = {append('TE suction side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
+                add = {append('TE pressure side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
                 leg{j} = vertcat(leg{j},add);
             end
             if bc(2) == 1
@@ -305,7 +304,7 @@ for j = 1:height(list)
                     pchk(3) = 1;
                     trail_clouds = pointCloud(cut,"Color",col_4leg);
                 end
-                add = {append('TE pressure side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
+                add = {append('TE suction side, damage ',num2str(i)), col_4leg(1), col_4leg(2), col_4leg(3), sprintf('%d_%s_%02d', small.BladeID(i), small.InspDate{i}, small.No(i)), small.RPos(i), small.InspComm(i)};
                 leg{j} = vertcat(leg{j},add);
 
             end
